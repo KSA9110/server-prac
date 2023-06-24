@@ -2,7 +2,7 @@
 
 const id = document.querySelector("#id"), // #을 붙이면 id값에 담긴 선택자를 가져온다는 뜻.
   psword = document.querySelector("#psword"),
-loginBtn = document.querySelector("button"); //button 태그를 통째로 불러오는거임.
+loginBtn = document.querySelector("#button"); //button 태그를 통째로 불러오는거임.
   
 
 loginBtn.addEventListener("click", login);
@@ -31,8 +31,8 @@ fetch("/login", {
       alert(res.msg);
     }
   })
-  .catch((err) => {
-    console.error("로그인 중 에러 발생");
+  .catch((err) => { //then().then() 로직 실행중에 에러가 생겼을 경우 잡아주는 코드
+    console.error("로그인 중 에러 발생 login.js");
   });
 }
 
